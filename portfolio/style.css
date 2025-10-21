@@ -1,0 +1,39 @@
+.header {
+    display: grid;
+    position: relative;
+    height: 200px;
+    background: radial-gradient(circle at top left, #1e90ff, #0047ab);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Formes blanches brillantes inspirées de l’herbe */
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: -50%;
+    background: 
+    radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.12) 0%, transparent 80%),
+    radial-gradient(ellipse at 50% 90%, rgba(255,255,255,0.1) 0%, transparent 85%);
+  transform: skewY(-10deg);
+  animation: moveShine 15s infinite linear alternate;
+}
+
+@keyframes moveShine {
+  from { transform: translateX(0) skewY(-10deg); }
+  to { transform: translateX(-10%) skewY(-10deg); }
+}
+
+  
+
+
+
+
