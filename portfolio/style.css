@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .header-svg {
   position: relative;
   height: 200px;
@@ -85,16 +90,24 @@ main {
   margin: 0;
 }
 
-/* Section exercices */
-.exercises {
-  margin-top: 50px;
-  text-align: center;
+.exercice-item-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.exercises h2 {
-  color: #0047ab;
+.exercice-item-1 > div,
+.exercice-item-1 > p {
+  flex: 1;
 }
 
-.exercises h4 {
-  margin: 8px 0;
+.preview-1 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
