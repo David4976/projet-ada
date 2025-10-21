@@ -4,33 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>My First Website</title>
+    <title>Document</title>
   </head>
-
   <body>
-    <header>
-      <div class="header">
-        <h1>DAVID BELLOIR</h1>
-        <h4>Developpeur FullStack en devenir</h4>
+    <header class="header-svg">
+      <div class="header-svg-content">
+        <h1>David BELLOIR</h1>
+        <h4>Développeur Full Stack en devenir</h4>
+        <svg class="grass" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#grad)"
+            fill-opacity="0.3"
+            d="M0,256L48,234.7C96,213,192,171,288,160C384,149,480,171,576,176C672,181,768,171,864,170.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="white" stop-opacity="0.8" />
+              <stop offset="100%" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </header>
     <main>
-      <img
-        src="File:///c:/Users/david/OneDrive/Documents/Projet Ada/4d0bf7e0-6d42-4802-b3a0-c1967ca1ec34.png"
-        alt="avatar"
-      />
-      <h2 class="block">A propos de moi</h2>
-      <p>
-        Plus de 25 ans d’expérience dans le domaine de l’industrie (ça ne me
-        rajeunit pas !), voici désormais le moment de me concentrer sur
-        moi-même. Le code, rien que du code pour ma créativite et ma logique
-        imaginaire débordante.
-      </p>
+      <section class="about">
+        <img src="/avatar.png" alt="avatar" />
+        <div class="about-text">
+          <h2 class="block">A propos de moi</h2>
+          <p>
+            Plus de 25 ans d’expérience dans le domaine de l’industrie (ça ne me
+            rajeunit pas !), voici désormais le moment de me concentrer sur
+            moi-même. Le code, rien que du code pour ma créativite et ma logique
+            imaginaire débordante.
+          </p>
+        </div>
+      </section>
 
-      <h2 class="block">Mes exercices</h2>
-      <h4></h4>
+      <section class="section exercice">
+        <h2 class="block">Mes exercices</h2>
+        <ul>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21350/assignsubmission_file/submission_files/10012/indexlvada.html?forcedownload=1"
+              >La vie d'Ada</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21350/assignsubmission_file/submission_files/10012/styleslvada.css?forcedownload=1"
+              >La vie d'Ada</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21382/assignsubmission_file/submission_files/10209/index-2.html?forcedownload=1"
+              >Horoscope</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21382/assignsubmission_file/submission_files/10209/indexjs-2.js?forcedownload=1"
+              >Horoscope</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21383/assignsubmission_file/submission_files/10301/index-3.html?forcedownload=1"
+              >Compteur</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://moodle.adatechschool.fr/pluginfile.php/21383/assignsubmission_file/submission_files/10301/script-3.js?forcedownload=1"
+              >Compteur</a
+            >
+          </li>
+        </ul>
+      </section>
     </main>
-
-    <footer></footer>
   </body>
 </html>

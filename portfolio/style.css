@@ -1,39 +1,100 @@
-.header {
-    display: grid;
-    position: relative;
-    height: 200px;
-    background: radial-gradient(circle at top left, #1e90ff, #0047ab);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.header-svg {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(180deg, #007bff, #0047ab);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* Formes blanches brillantes inspirées de l’herbe */
-.header::before,
-.header::after {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: 0;
-    left: -50%;
-    background: 
-    radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.15) 0%, transparent 70%),
-    radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.12) 0%, transparent 80%),
-    radial-gradient(ellipse at 50% 90%, rgba(255,255,255,0.1) 0%, transparent 85%);
-  transform: skewY(-10deg);
-  animation: moveShine 15s infinite linear alternate;
+.header-svg-content {
+  z-index: 2;
 }
 
-@keyframes moveShine {
-  from { transform: translateX(0) skewY(-10deg); }
-  to { transform: translateX(-10%) skewY(-10deg); }
+.header-svg-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
 }
 
-  
+.header-svg-content h4 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
 
+.grass {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
 
+/* Fond général */
+main {
+  background-color: #f0ffff; /* bleu clair */
+  padding: 40px;
+}
 
+/* SECTION A PROPOS */
+.about {
+  display: flex;
+  flex-direction: row; /* aligne sur la même ligne */
+  justify-content: space-between; /* image à gauche, texte à droite */
+  align-items: center; /* aligne verticalement au centre */
+  flex-wrap: nowrap; /* empêche le passage à la ligne */
+  gap: 40px;
+  /* background-color: #007bff; */
+}
 
+/* Image */
+.about img {
+  width: 250px;
+  height: auto;
+  flex-shrink: 0; /* empêche l'image de rétrécir */
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Bloc texte */
+.about-text {
+  flex: 1; /* occupe l'espace restant */
+  max-width: 500px;
+  margin-left: auto;
+  border: 2px solid #007bff;
+  background-color: #ffffffcc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Titre */
+.about-text h2 {
+  color: #0047ab;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+/* Paragraphe */
+.about-text p {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Section exercices */
+.exercises {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.exercises h2 {
+  color: #0047ab;
+}
+
+.exercises h4 {
+  margin: 8px 0;
+}
