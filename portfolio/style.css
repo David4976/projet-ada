@@ -111,3 +111,134 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+.exercice-item-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.preview-2 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.exercice-item-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.preview-3 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.github-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #0047ab;
+  font-weight: 600;
+  border: 2px solid #0047ab;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #0047ab;
+  color: white;
+}
+
+.footer {
+  background-color: #0047ab; /* bleu profond */
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #ffd700; /* or doux pour contraster avec le bleu */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 180px;
+  }
+
+  .about-text {
+    margin-top: 20px;
+  }
+
+  .header-svg-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-svg-content h4 {
+    font-size: 1rem;
+  }
+
+  .exercice {
+    padding: 25px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-svg-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .about-text,
+  .exercice {
+    padding: 20px;
+  }
+
+  .github-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
