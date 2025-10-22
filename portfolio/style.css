@@ -1,12 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  /* margin-top: 30px; */
+}
+
+body {
+  font-family: "Story+Script", sans-serif;
 }
 
 .header-svg {
   position: relative;
   height: 200px;
-  background: linear-gradient(180deg, #007bff, #0047ab);
+  background: linear-gradient(180deg, #3498db, #0047ab);
   color: white;
   display: flex;
   align-items: center;
@@ -39,7 +44,7 @@
 
 /* Fond général */
 main {
-  background-color: #f0ffff; /* bleu clair */
+  background-color: #aed6f1; /* bleu clair */
   padding: 40px;
 }
 
@@ -61,6 +66,7 @@ main {
   flex-shrink: 0; /* empêche l'image de rétrécir */
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 5px solid #2471a3;
 }
 
 /* Bloc texte */
@@ -83,6 +89,121 @@ main {
   font-size: 1.8rem;
 }
 
+.section-exercice {
+  margin: 30px;
+}
+
+/* --- SECTION --- */
+.exercice {
+  background-color: #f2f6ff;
+  border-radius: 15px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exercice h2 {
+  text-align: center;
+  color: #0047ab;
+  margin-bottom: 30px;
+}
+
+/* --- TABLE STYLE --- */
+.table-exos {
+  display: grid;
+  grid-template-columns: 1fr; /* par défaut, 1 colonne sur mobile */
+  gap: 10px;
+}
+
+/* En-tête */
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  background-color: #0047ab;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Lignes */
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.table-row:hover {
+  transform: scale(1.02);
+}
+
+/* Lien GitHub */
+.table-row a {
+  color: #0047ab;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.table-row a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+.table-row img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    row-gap: 10px;
+  }
+
+  .table-header div:nth-child(n + 3),
+  .table-row div:nth-child(n + 3) {
+    grid-column: 1 / -1; /* prend toute la ligne */
+  }
+
+  .table-row img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .table-header {
+    display: none; /* On cache l’en-tête sur très petit écran */
+  }
+
+  .table-row {
+    display: block;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .table-row div {
+    margin-bottom: 10px;
+  }
+
+  .table-row img {
+    width: 100%;
+  }
+}
+
 /* Paragraphe */
 .about-text p {
   color: #333;
@@ -90,10 +211,11 @@ main {
   margin: 0;
 }
 
-.exercice-item-1 {
+/* .exercice-item-1 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
@@ -102,7 +224,7 @@ main {
 .exercice-item-1 > div,
 .exercice-item-1 > p {
   flex: 1;
-}
+} */
 
 .preview-1 img {
   width: 100%;
@@ -112,14 +234,14 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.exercice-item-2 {
+/* .exercice-item-2 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
-}
+} */
 
 .preview-2 img {
   width: 100%;
@@ -129,14 +251,14 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.exercice-item-3 {
+/* .table-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
-}
+} */
 
 .preview-3 img {
   width: 100%;
@@ -164,11 +286,11 @@ main {
 
 .footer {
   position: relative;
-  background: linear-gradient(180deg, #007bff, #0047ab);
+  background: linear-gradient(180deg, #3498db, #0047ab);
   color: white;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .footer a {
