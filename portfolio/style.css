@@ -163,7 +163,8 @@ main {
 }
 
 .footer {
-  background-color: #0047ab; /* bleu profond */
+  position: relative;
+  background: linear-gradient(180deg, #007bff, #0047ab);
   color: white;
   text-align: center;
   padding: 30px 20px;
